@@ -18,12 +18,13 @@
     <!-- Navigation -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">Rookesh.<span>dev</span></a>
+            <a href="#home" class="logo">Rookesh Mallampati</a>
             <nav class="nav-links">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
-                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
                 <a href="#architecture" class="nav-link">Architecture</a>
             </nav>
             <div class="nav-socials">
@@ -48,6 +49,7 @@
                     <div class="hero-actions">
                         <a href="mailto:rookesh7599@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
                         <a href="https://github.com/rookeshmallampati" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub Profile</a>
+                        <a href="https://linkedin.com/in/rookeshmallampati" target="_blank" class="btn btn-secondary"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -144,12 +146,98 @@
             </div>
         </section>
 
+        <!-- Projects Section (Moved between Skills and Experience) -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Key Projects</h2>
+                <div class="projects-container">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-card fade-in-up">
+                        <div class="project-header">
+                            <i class="fas fa-server"></i>
+                            <h3>AWS VPC Enterprise Architecture Design</h3>
+                        </div>
+                        <p class="project-desc">Architected a highly available, multi-tier AWS VPC network architecture enabling secure enterprise application isolation.</p>
+                        <ul class="project-bullets">
+                            <li><strong>Designed</strong> a resilient VPC structure featuring strictly segregated public, private, and database subnets.</li>
+                            <li><strong>Implemented</strong> Internet Gateways (IGW), NAT Gateways, and complex centralized route tables for outbound flow control.</li>
+                            <li><strong>Secured</strong> traffic boundaries utilizing precise Security Groups and NACLs to enforce zero-trust policies at the subnet layer.</li>
+                            <li><strong>Optimized</strong> comprehensive high availability and improved critical network performance routing times by 20%.</li>
+                        </ul>
+                        <div class="project-tools">
+                            <strong>Tools:</strong> AWS VPC, Subnets, IGW, NAT, Security Groups, NACLs
+                        </div>
+                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card fade-in-up">
+                        <div class="project-header">
+                            <i class="fas fa-dharmachakra"></i>
+                            <h3>Kubernetes Overlay Networking & CNI Setup</h3>
+                        </div>
+                        <p class="project-desc">Implemented a scalable and robust container networking foundation utilizing advanced CNI plugins.</p>
+                        <ul class="project-bullets">
+                            <li><strong>Engineered</strong> microservice application deployments utilizing Kubernetes orchestration.</li>
+                            <li><strong>Configured</strong> advanced CNI (Calico) for secure, high-performance Pod-to-Pod network routing protocols.</li>
+                            <li><strong>Implemented</strong> access configurations exposing critical backend services securely via NodePort and LoadBalancer setups.</li>
+                            <li><strong>Optimized</strong> cluster expansions, scaling network deployments seamlessly while increasing resource utilization efficiency.</li>
+                        </ul>
+                        <div class="project-tools">
+                            <strong>Tools:</strong> Kubernetes, Calico (CNI), Docker, LoadBalancer
+                        </div>
+                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card fade-in-up">
+                        <div class="project-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Secure CI/CD Network Pipeline Automation</h3>
+                        </div>
+                        <p class="project-desc">Engineered an automated software delivery pipeline interwoven with continuous network security scanning environments.</p>
+                        <ul class="project-bullets">
+                            <li><strong>Designed</strong> resilient automated CI/CD pipelines deploying directly to AWS environments utilizing Jenkins and GitHub Actions.</li>
+                            <li><strong>Integrated</strong> crucial Vulnerability Scanning using Trivy and Snyk directly into the build and network provisioning processes.</li>
+                            <li><strong>Implemented</strong> container deployment automation targeting secure private subnets, completely eliminating manual handoffs.</li>
+                            <li><strong>Optimized</strong> resource build cycles, reducing total deployment time by ~35% while fundamentally boosting infrastructure security posture.</li>
+                        </ul>
+                        <div class="project-tools">
+                            <strong>Tools:</strong> Jenkins, GitHub Actions, Trivy, Snyk
+                        </div>
+                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card fade-in-up">
+                        <div class="project-header">
+                            <i class="fas fa-cube"></i>
+                            <h3>Terraform Infrastructure Automation & State Management</h3>
+                        </div>
+                        <p class="project-desc">Automated end-to-end cloud infrastructure provisioning enforcing strict Infrastructure as Code (IaC) standards.</p>
+                        <ul class="project-bullets">
+                            <li><strong>Engineered</strong> systematic AWS resource provisioning across multiple deployment environments exclusively through code.</li>
+                            <li><strong>Implemented</strong> secure backend state management utilizing Amazon S3 and DynamoDB to lock execution operations securely.</li>
+                            <li><strong>Designed</strong> highly reusable, parameterized Terraform modules for rapid VPC scaling and Security Group inheritance.</li>
+                            <li><strong>Secured</strong> infrastructure health by enforcing declarative architecture rules that completely eliminated configuration drift.</li>
+                        </ul>
+                        <div class="project-tools">
+                            <strong>Tools:</strong> Terraform, AWS, S3 Backend, DynamoDB, IaC
+                        </div>
+                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Experience & Environment Section -->
-        <section id="experience" class="section">
+        <section id="experience" class="section bg-alt">
             <div class="container fade-in-up">
                 <h2 class="section-title">Experience & Environment</h2>
                 
-                <div class="environment-card">
+                <div class="environment-card mb-4">
                     <h3>Enterprise Technical Environment</h3>
                     <p>My daily workflow orchestrates high-availability systems using the following core stack:</p>
                     <div class="env-tags">
@@ -167,11 +255,11 @@
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <h4>Senior Cloud Network Engineer</h4>
-                            <p class="timeline-date">Enterprise Impact</p>
+                            <p class="timeline-date">Enterprise Exposure</p>
                             <ul>
                                 <li><strong>Designed</strong> and deployed global enterprise architecture focusing on high-availability, hybrid cloud routing, and deep packet inspection.</li>
-                                <li><strong>Engineered</strong> scalable CI/CD pipelines incorporating Trivy and Snyk to shift security left and block vulnerabilities.</li>
-                                <li><strong>Implemented</strong> Terraform IaC strategies to fully codify networking policies and firewalls, eliminating configuration drift.</li>
+                                <li><strong>Engineered</strong> scalable CI/CD pipelines incorporating Trivy and Snyk to shift network security left and block system vulnerabilities.</li>
+                                <li><strong>Implemented</strong> Terraform IaC strategies to fully codify networking policies and firewalls, eliminating crucial configuration drift.</li>
                             </ul>
                         </div>
                     </div>
@@ -179,105 +267,40 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section bg-alt">
-            <div class="container">
-                <h2 class="section-title">Key Projects</h2>
-                <div class="projects-container">
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <div class="container fade-in-up">
+                <h2 class="section-title">Certifications</h2>
+                <div class="skills-grid">
                     
-                    <!-- Project 1 -->
-                    <div class="project-card fade-in-up">
-                        <div class="project-header">
-                            <i class="fas fa-server"></i>
-                            <h3>Project 1: AWS VPC Architecture</h3>
-                        </div>
-                        <p class="project-desc">Engineered a highly available, multi-tier AWS VPC network architecture for enterprise application isolation.</p>
-                        <ul class="project-bullets">
-                            <li><strong>Designed</strong> a resilient VPC with strictly segregated public and private subnets.</li>
-                            <li><strong>Configured</strong> Internet Gateways (IGW), NAT Gateways, and complex centralized route tables.</li>
-                            <li><strong>Implemented</strong> precise Security Groups and NACLs to enforcing zero-trust boundaries at the subnet layer.</li>
-                            <li><strong>Ensured</strong> comprehensive high availability and improved network performance by 20% by optimizing traffic routing.</li>
-                        </ul>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> AWS VPC, Subnets, IGW, NAT, Security Groups
-                        </div>
-                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    <div class="cert-card">
+                        <i class="fas fa-certificate cert-icon"></i>
+                        <h4>Security+</h4>
+                        <p class="text-secondary text-sm mt-2">CompTIA</p>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="project-card fade-in-up">
-                        <div class="project-header">
-                            <i class="fas fa-dharmachakra"></i>
-                            <h3>Project 2: Kubernetes Networking</h3>
-                        </div>
-                        <p class="project-desc">Implemented a scalable and robust container networking foundation utilizing advanced CNI plugins.</p>
-                        <ul class="project-bullets">
-                            <li><strong>Deployed</strong> microservice applications dynamically using Kubernetes orchestration.</li>
-                            <li><strong>Configured</strong> advanced CNI (Calico) for secure, high-performance Pod-to-Pod network routing.</li>
-                            <li><strong>Exposed</strong> critical backend services securely using NodePort and LoadBalancer configurations.</li>
-                            <li><strong>Scaled</strong> deployments seamlessly, increasing resource utilization efficiency and reliability across the cluster.</li>
-                        </ul>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> Kubernetes, Calico, Docker, LoadBalancer
-                        </div>
-                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    <div class="cert-card">
+                        <i class="fas fa-network-wired cert-icon"></i>
+                        <h4>Network+</h4>
+                        <p class="text-secondary text-sm mt-2">CompTIA</p>
                     </div>
 
-                    <!-- Project 3 -->
-                    <div class="project-card fade-in-up">
-                        <div class="project-header">
-                            <i class="fas fa-shield-alt"></i>
-                            <h3>Project 3: CI/CD with Security</h3>
-                        </div>
-                        <p class="project-desc">Engineered an automated software delivery pipeline interwoven with continuous security scanning parameters.</p>
-                        <ul class="project-bullets">
-                            <li><strong>Built</strong> resilient CI/CD pipelines utilizing Jenkins and GitHub Actions.</li>
-                            <li><strong>Integrated</strong> automated Vulnerability Scanning using Trivy and Snyk directly into the build process.</li>
-                            <li><strong>Automated</strong> container deployments to target infrastructure eliminating manual handoffs.</li>
-                            <li><strong>Reduced</strong> total deployment time by ~35% while fundamentally boosting infrastructure security posture.</li>
-                        </ul>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> Jenkins, GitHub Actions, Trivy, Snyk
-                        </div>
-                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    <div class="cert-card">
+                        <i class="fas fa-user-shield cert-icon"></i>
+                        <h4>CEH</h4>
+                        <p class="text-secondary text-sm mt-2">Certified Ethical Hacker</p>
                     </div>
 
-                    <!-- Project 4 -->
-                    <div class="project-card fade-in-up">
-                        <div class="project-header">
-                            <i class="fas fa-cube"></i>
-                            <h3>Project 4: Terraform Infrastructure Automation</h3>
-                        </div>
-                        <p class="project-desc">Automated end-to-end cloud infrastructure provisioning enforcing strict Infrastructure as Code (IaC) standards.</p>
-                        <ul class="project-bullets">
-                            <li><strong>Automated</strong> AWS resource provisioning systematically across multiple deployment environments.</li>
-                            <li><strong>Designed</strong> backend state management utilizing S3 and DynamoDB for secure, locked execution.</li>
-                            <li><strong>Created</strong> highly reusable, parameterized Terraform modules for VPC and Security Group generation.</li>
-                            <li><strong>Implemented</strong> declarative architecture rules that completely eliminated configuration drift and manual errors.</li>
-                        </ul>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> Terraform, AWS, S3 Backend, HCL
-                        </div>
-                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    <div class="cert-card">
+                        <i class="fas fa-shield-alt cert-icon"></i>
+                        <h4>CISM</h4>
+                        <p class="text-secondary text-sm mt-2">Certified Information Security Manager</p>
                     </div>
 
-                    <!-- Project 5 -->
-                    <div class="project-card fade-in-up">
-                        <div class="project-header">
-                            <i class="fab fa-node-js"></i>
-                            <h3>Project 5: Node.js + MySQL App Deployment</h3>
-                        </div>
-                        <p class="project-desc">Architected the deployment and containerization of a backend monolithic API integrated with a robust database.</p>
-                        <ul class="project-bullets">
-                            <li><strong>Engineered</strong> the production deployment of a high-throughput Node.js backend API.</li>
-                            <li><strong>Implemented</strong> Docker Compose configurations to seamlessly link the Application and MySQL instances.</li>
-                            <li><strong>Secured</strong> API endpoints utilizing strict JSON Web Token (JWT) authentication policies.</li>
-                            <li><strong>Designed</strong> resilient networking within Docker bridging guaranteeing rapid application interactions.</li>
-                        </ul>
-                        <div class="project-tools">
-                            <strong>Tools:</strong> Node.js, MySQL, Docker Compose, JWT
-                        </div>
-                        <a href="https://github.com/rookeshmallampati" target="_blank" class="project-link"><i class="fab fa-github"></i> View Repository</a>
+                    <div class="cert-card">
+                        <i class="fas fa-laptop-code cert-icon"></i>
+                        <h4>Cybersecurity Analyst</h4>
+                        <p class="text-secondary text-sm mt-2">Cisco</p>
                     </div>
 
                 </div>
@@ -285,57 +308,27 @@
         </section>
 
         <!-- Architecture Diagrams Section -->
-        <section id="architecture" class="section">
+        <section id="architecture" class="section bg-alt">
             <div class="container fade-in-up">
                 <h2 class="section-title">Architecture Diagrams</h2>
-                <p class="text-center mb-4 text-secondary">High-level visualizations of cloud and container routing topologies.</p>
+                <p class="text-center mb-4 text-secondary">High-level enterprise visualizations of cloud and container routing topologies.</p>
                 
                 <div class="diagram-grid">
                     <div class="diagram-card">
                         <h3>AWS VPC Architecture Diagram</h3>
-                        <div class="diagram-placeholder">
-                            <div class="mermaid">
-                                graph TD
-                                    User((End User)) --> IGW[Internet Gateway]
-                                    IGW --> ALB[Application Load Balancer]
-                                    
-                                    subgraph "AWS VPC"
-                                        ALB --> PublicSub[Public Subnet: NAT Gateway]
-                                        PublicSub -- Routed Via NAT --> PrivateSub[Private Subnet: EC2 / EKS]
-                                        PrivateSub --> DBSub[Isolated Subnet: RDS Database]
-                                    end
-                                    
-                                    style IGW fill:#232f3e,color:#fff
-                                    style ALB fill:#8ca1dd,color:#000
-                                    style PublicSub fill:#e7f0f7,color:#000,stroke:#3b48cc
-                                    style PrivateSub fill:#fcf3f3,color:#000,stroke:#d13212
-                                    style DBSub fill:#f2f8f5,color:#000,stroke:#1d8102
-                            </div>
+                        <div class="diagram-placeholder-box">
+                            <i class="fas fa-image"></i>
+                            <p>[ AWS VPC Network Architecture Image Placeholder ]</p>
+                            <span class="text-sm">Insert custom 16:9 diagram file here</span>
                         </div>
                     </div>
 
                     <div class="diagram-card">
-                        <h3>Kubernetes Architecture Diagram</h3>
-                        <div class="diagram-placeholder">
-                            <div class="mermaid">
-                                graph TD
-                                    Traffic((External Traffic)) --> LB[Cloud Load Balancer]
-                                    LB --> Ingress[K8s Ingress Controller]
-                                    
-                                    subgraph "Kubernetes Cluster (CNI: Calico)"
-                                        Ingress --> Svc1[NodePort / ClusterIP Service]
-                                        Svc1 -- CNI Routing Policies --> PodA(App Pod 1)
-                                        Svc1 -- CNI Routing Policies --> PodB(App Pod 2)
-                                        
-                                        PodA -. Network Policy Blocks Lateral Move .- PodB
-                                    end
-                                    
-                                    style LB fill:#8ca1dd,color:#000
-                                    style Ingress fill:#326ce5,color:#fff
-                                    style Svc1 fill:#f5d040,color:#000
-                                    style PodA fill:#fff,color:#326ce5,stroke:#326ce5
-                                    style PodB fill:#fff,color:#326ce5,stroke:#326ce5
-                            </div>
+                        <h3>Kubernetes Network Architecture</h3>
+                        <div class="diagram-placeholder-box">
+                            <i class="fas fa-image"></i>
+                            <p>[ Kubernetes & CNI Cluster Image Placeholder ]</p>
+                            <span class="text-sm">Insert custom 16:9 diagram file here</span>
                         </div>
                     </div>
                 </div>
@@ -343,7 +336,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section bg-alt">
+        <section id="contact" class="section">
             <div class="container fade-in-up">
                 <h2 class="section-title">Let's Connect</h2>
                 <div class="contact-card">
@@ -382,27 +375,13 @@
 
     <footer>
         <div class="container footer-content">
-            <p>&copy; 2026 Rookesh Mallampati. Engineered for Scale.</p>
+            <p>&copy; 2026 Rookesh Mallampati | Senior Cloud Network Engineer. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize Mermaid
-            mermaid.initialize({ 
-                startOnLoad: true, 
-                theme: 'base',
-                themeVariables: {
-                    primaryColor: '#ffffff',
-                    primaryTextColor: '#111827',
-                    primaryBorderColor: '#e5e7eb',
-                    lineColor: '#6b7280',
-                    fontFamily: 'Inter, sans-serif'
-                }
-            });
-
             // Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
