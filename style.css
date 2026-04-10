@@ -751,11 +751,16 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-.project-metrics p {
+.project-metrics p, .project-metrics li {
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
     line-height: 1.6;
+}
+
+.project-metrics ul {
+    list-style: disc;
+    padding-left: 1.5rem;
 }
 
 .project-metrics strong {
