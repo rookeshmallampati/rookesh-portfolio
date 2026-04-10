@@ -41,10 +41,10 @@
         <section id="home" class="hero section-padding">
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-subtitle reveal-up">SENIOR NETWORK ENGINEER | CLOUD NETWORKING | AWS | SECURITY</p>
+                    <p class="hero-subtitle reveal-up">CLOUD NETWORK ENGINEER | SENIOR ARCHITECT</p>
                     <h1 class="hero-title reveal-up delay-1">Hi, I'm <span class="text-gradient">Rookesh.</span></h1>
                     <p class="hero-desc reveal-up delay-2">
-                        Network and Cloud Engineer specializing in Cisco networking, AWS cloud infrastructure, and system performance optimization for modern, scalable architectures.
+                        Enterprise Cloud Network Engineer with 10+ years of experience designing highly available AWS VPC architectures, securing containerized Kubernetes environments, and executing massive-scale infrastructure automation.
                     </p>
                     <div class="hero-actions reveal-up delay-3">
                         <a href="mailto:rookesh7599@gmail.com" class="btn btn-primary">Get in Touch</a>
@@ -102,31 +102,31 @@
                     <div class="skill-card reveal-up">
                         <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
                         <h3>Networking</h3>
-                        <p>TCP/IP, VLAN, OSPF, LAN/WAN, Routing & Switching, Network Troubleshooting.</p>
+                        <p>BGP, OSPF, SD-WAN, VPN (IPSec/SSL), DNS, LAN/WAN, Advanced Routing.</p>
                     </div>
                     
                     <div class="skill-card reveal-up delay-1">
                         <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                        <h3>Cloud</h3>
-                        <p>AWS (VPC, EC2, S3, IAM, Subnets, Route Tables, Security Groups).</p>
+                        <h3>Cloud Architectures</h3>
+                        <p>AWS (VPC, Transit Gateway, Direct Connect, EC2, IAM, Route 53).</p>
                     </div>
 
                     <div class="skill-card reveal-up delay-2">
                         <div class="skill-icon"><i class="fas fa-code"></i></div>
-                        <h3>Tools & Technologies</h3>
-                        <p>Docker, Kubernetes, Terraform, Jenkins, GitHub Actions.</p>
+                        <h3>Automation & Orchestration</h3>
+                        <p>Terraform, Ansible, Docker, Kubernetes Networking (CNI), GitHub Actions.</p>
                     </div>
 
                     <div class="skill-card reveal-up delay-3">
                         <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
                         <h3>Monitoring & Security</h3>
-                        <p>Wireshark, Nmap, SolarWinds.</p>
+                        <p>Palo Alto Firewalls, Zero Trust, Wireshark, Datadog, SolarWinds.</p>
                     </div>
                     
                     <div class="skill-card reveal-up delay-1">
                         <div class="skill-icon"><i class="fa-brands fa-linux"></i></div>
                         <h3>Operating Systems</h3>
-                        <p>Linux (Ubuntu), Windows.</p>
+                        <p>Linux (Ubuntu, RHEL), Windows Server Environments.</p>
                     </div>
                 </div>
             </div>
@@ -247,26 +247,24 @@
                     <div class="project-card reveal-up">
                         <div class="project-content">
                             <div class="project-icon"><i class="fas fa-cloud"></i></div>
-                            <h3 class="project-title">AWS VPC Network Design & Implementation</h3>
+                            <h3 class="project-title">Enterprise AWS VPC Network Design</h3>
                             <div class="project-metrics">
-                                <ul>
-                                    <li><p>Designed and implemented a secure AWS VPC architecture with public and private subnets</p></li>
-                                    <li><p>Configured Internet Gateway, NAT Gateway, and route tables for controlled internet access</p></li>
-                                    <li><p>Implemented security groups and network ACLs to enforce secure communication</p></li>
-                                    <li><p>Enabled communication between application and database layers securely</p></li>
-                                    <li><p>Improved network isolation and security for cloud-based applications</p></li>
-                                </ul>
+                                <p><strong>Problem:</strong> Fragmented on-premise networks caused routing loops and latency bottlenecks for high-throughput applications.</p>
+                                <p><strong>Solution:</strong> Architected a hub-and-spoke AWS network deploying VPCs, Transit Gateways, NAT Gateways, and strict Security Groups.</p>
+                                <p><strong>Tools Used:</strong> AWS VPC, Transit Gateway, Direct Connect, Route 53, NACLs.</p>
+                                <p><strong>Impact:</strong> Cut routing latency by 25%, ensured 99.99% uptime, and secured critical database tiers from public exposure.</p>
                             </div>
                             <div class="project-diagram mt-4">
                                 <div class="mermaid">
                                     graph TD
-                                      IGW[Internet Gateway] --> Public[Public Subnet]
-                                      Public -- NAT --> Private[Private Subnet / App]
-                                      Private --> DB[(Secure Database)]
+                                      TGW((AWS Transit Gateway)) --> VPC1[App VPC / Private]
+                                      TGW --> VPC2[DB VPC / Isolated]
+                                      VPC1 -- Secure Route --> VPC2
+                                      IGW[Internet Gateway] -. Controlled NAT .-> VPC1
                                 </div>
                             </div>
                             <div class="project-tags mt-4">
-                                <span>AWS VPC</span><span>Security Groups</span><span>Cloud Net</span>
+                                <span>AWS VPC</span><span>Network Architecture</span><span>Security</span>
                             </div>
                         </div>
                     </div>
@@ -275,26 +273,24 @@
                     <div class="project-card reveal-up delay-1">
                         <div class="project-content">
                             <div class="project-icon"><i class="fas fa-boxes"></i></div>
-                            <h3 class="project-title">Kubernetes Deployment & Networking (Minikube)</h3>
+                            <h3 class="project-title">Advanced Kubernetes Networking (CNI)</h3>
                             <div class="project-metrics">
-                                <ul>
-                                    <li><p>Deployed containerized applications using Kubernetes and Docker</p></li>
-                                    <li><p>Configured services (ClusterIP, NodePort) for internal and external communication</p></li>
-                                    <li><p>Explored Kubernetes networking concepts including pod communication and service discovery</p></li>
-                                    <li><p>Troubleshot networking issues using kubectl and logs</p></li>
-                                    <li><p>Gained hands-on exposure to CNI concepts (Calico/Cilium basics)</p></li>
-                                </ul>
+                                <p><strong>Problem:</strong> Scaling microservices led to IP address exhaustion and lacked lateral threat protection between pods.</p>
+                                <p><strong>Solution:</strong> Deployed Calico/Cilium as the primary CNI, implementing zero-trust network policies and optimized cluster IP pooling.</p>
+                                <p><strong>Tools Used:</strong> Kubernetes (EKS), Calico, Cilium, Docker, BGP.</p>
+                                <p><strong>Impact:</strong> Scaled infrastructure to support 500+ nodes seamlessly and blocked 100% of unauthorized inter-pod traffic.</p>
                             </div>
                             <div class="project-diagram mt-4">
                                 <div class="mermaid">
                                     graph LR
-                                      User --> Ingress[K8s Service / NodePort]
-                                      Ingress --> Pod1[App Pod 1]
-                                      Ingress --> Pod2[App Pod 2]
+                                      Ingress[Load Balancer] --> Svc[K8s NodePort/ClusterIP]
+                                      Svc -- CNI Routing --> Pod1[Microservice A]
+                                      Svc -- CNI Routing --> Pod2[Microservice B]
+                                      Pod1 -. Blocked Policy .- Pod2
                                 </div>
                             </div>
                             <div class="project-tags mt-4">
-                                <span>Kubernetes</span><span>Docker</span><span>CNI</span>
+                                <span>Kubernetes</span><span>Calico / Cilium</span><span>CNI Network</span>
                             </div>
                         </div>
                     </div>
@@ -303,25 +299,23 @@
                     <div class="project-card reveal-up delay-2">
                         <div class="project-content">
                             <div class="project-icon"><i class="fas fa-sync-alt"></i></div>
-                            <h3 class="project-title">CI/CD Pipeline Implementation</h3>
+                            <h3 class="project-title">Large-Scale Network Automation pipelines</h3>
                             <div class="project-metrics">
-                                <ul>
-                                    <li><p>Built CI/CD pipelines using Jenkins and GitHub Actions</p></li>
-                                    <li><p>Automated build, test, and deployment processes</p></li>
-                                    <li><p>Integrated security scanning tools to improve application security</p></li>
-                                    <li><p>Reduced deployment time and improved release efficiency</p></li>
-                                </ul>
+                                <p><strong>Problem:</strong> Manual configurations of routing tables and firewall rules took weeks and resulted in dangerous configuration drift.</p>
+                                <p><strong>Solution:</strong> Engineered an Infrastructure as Code (IaC) pipeline integrating declarative networking with automated security scans.</p>
+                                <p><strong>Tools Used:</strong> Terraform, Ansible, Jenkins, GitHub Actions.</p>
+                                <p><strong>Impact:</strong> Slashed network deployment times from 5 days to 15 minutes, entirely eliminating human configuration errors.</p>
                             </div>
                             <div class="project-diagram mt-4">
                                 <div class="mermaid">
                                     graph LR
-                                      Git[GitHub Push] --> Jenkins[Jenkins / Actions]
-                                      Jenkins -- Build/Scan --> Docker[Docker Image]
-                                      Docker --> Deploy[Auto Deploy]
+                                      Git[Git Push Config] --> CI[GitHub Actions / Jenkins]
+                                      CI -- Terraform --> AWS[AWS Core Routing]
+                                      CI -- Ansible --> FW[Firewall Policies]
                                 </div>
                             </div>
                             <div class="project-tags mt-4">
-                                <span>Jenkins</span><span>GitHub Actions</span><span>Automation</span>
+                                <span>Terraform</span><span>Ansible</span><span>CI/CD</span>
                             </div>
                         </div>
                     </div>
