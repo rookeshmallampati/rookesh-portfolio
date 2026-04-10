@@ -253,10 +253,24 @@
                     <div class="project-card reveal-up">
                         <div class="project-content">
                             <div class="project-icon"><i class="fas fa-project-diagram"></i></div>
-                            <h3 class="project-title">Enterprise SD-WAN Rollout</h3>
-                            <p class="project-desc">Led an enterprise-wide SD-WAN deployment using Cisco Viptela connecting multiple healthcare sites. This initiative significantly improved WAN performance, ensured 99.99% availability, and provided sub-second latency for mission-critical applications.</p>
-                            <div class="project-tags">
-                                <span>Cisco Viptela</span><span>SD-WAN</span><span>High Availability</span>
+                            <h3 class="project-title">SD-WAN Implementation using Cisco Viptela</h3>
+                            <div class="project-metrics">
+                                <p><strong>Problem:</strong> Legacy MPLS was expensive, lacked traffic visibility, and caused high latency for cloud apps.</p>
+                                <p><strong>Solution:</strong> Deployed Cisco Viptela across 50+ sites with dual WAN links, creating application-aware routing policies.</p>
+                                <p><strong>Tools Used:</strong> Cisco Viptela vManage, vSmart, vEdge, BGP/OSPF.</p>
+                                <p><strong>Impact:</strong> Reduced WAN costs by 30% and improved cloud app performance with 99.99% availability.</p>
+                            </div>
+                            <div class="project-diagram mt-4">
+                                <div class="mermaid">
+                                    graph TD
+                                      A[vManage] --> B(vSmart)
+                                      B --> C[vEdge Branch 1]
+                                      B --> D[vEdge Branch 2]
+                                      C -. Tunnels .- D
+                                </div>
+                            </div>
+                            <div class="project-tags mt-4">
+                                <span>Cisco Viptela</span><span>SD-WAN</span><span>Cost Optimization</span>
                             </div>
                         </div>
                     </div>
@@ -264,11 +278,24 @@
                     <!-- Project 2 -->
                     <div class="project-card reveal-up delay-1">
                         <div class="project-content">
-                            <div class="project-icon"><i class="fas fa-cloud-network"></i><i class="fas fa-cloud"></i></div>
-                            <h3 class="project-title">Hybrid Cloud Network Transformation</h3>
-                            <p class="project-desc">Engineered and deployed a secure, reliable hybrid connectivity solution between on-prem data centers and Azure/AWS for enterprise platforms. Utilized ExpressRoute, Direct Connect, and IPSec VPNs, improving overall network reliability by 25%.</p>
-                            <div class="project-tags">
-                                <span>Azure VNet</span><span>AWS VPC</span><span>ExpressRoute</span>
+                            <div class="project-icon"><i class="fas fa-cloud"></i></div>
+                            <h3 class="project-title">AWS Hybrid Cloud Network Architecture</h3>
+                            <div class="project-metrics">
+                                <p><strong>Problem:</strong> On-premise infrastructure lacked the scalability needed to handle new corporate workloads.</p>
+                                <p><strong>Solution:</strong> Architected an AWS VPC integrating Transit Gateway and Direct Connect, with IPSec VPN backend.</p>
+                                <p><strong>Tools Used:</strong> AWS VPC, Transit Gateway, Direct Connect, IPSec VPN.</p>
+                                <p><strong>Impact:</strong> Scaled to support 30% more user traffic while cutting latency to AWS by 15ms.</p>
+                            </div>
+                            <div class="project-diagram mt-4">
+                                <div class="mermaid">
+                                    graph LR
+                                      HQ[HQ] -- D-Connect --> TGW((TGW))
+                                      TGW --> VPC1[App VPC]
+                                      TGW --> VPC2[DB VPC]
+                                </div>
+                            </div>
+                            <div class="project-tags mt-4">
+                                <span>AWS</span><span>Direct Connect</span><span>Hybrid Cloud</span>
                             </div>
                         </div>
                     </div>
@@ -277,10 +304,48 @@
                     <div class="project-card reveal-up delay-2">
                         <div class="project-content">
                             <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
-                            <h3 class="project-title">Data Center VXLAN Segmentation</h3>
-                            <p class="project-desc">Designed a robust VXLAN-based network segmentation architecture using Cisco Nexus (NX-OS). This optimization enhanced traffic management, improved threat isolation across environments, and scaled network efficiency for high-performance workloads by 20%.</p>
-                            <div class="project-tags">
-                                <span>Cisco Nexus</span><span>VXLAN EVPN</span><span>Segmentation</span>
+                            <h3 class="project-title">Zero Trust Security Implementation</h3>
+                            <div class="project-metrics">
+                                <p><strong>Problem:</strong> Flat network architecture exposed internal systems to lateral movement in case of a breach.</p>
+                                <p><strong>Solution:</strong> Deployed Palo Alto Firewalls and Cisco ISE for micro-segmentation and identity access control.</p>
+                                <p><strong>Tools Used:</strong> Palo Alto PAN-OS, Panorama, Cisco ISE, 802.1X.</p>
+                                <p><strong>Impact:</strong> Reduced security alert fatigue by 40% and successfully blocked lateral movement mapping.</p>
+                            </div>
+                            <div class="project-diagram mt-4">
+                                <div class="mermaid">
+                                    graph TD
+                                      User[Device] -- 802.1X --> ISE[Cisco ISE]
+                                      Switch[Access Switch] --> FW[Palo Alto NGFW]
+                                      FW --> DC[Data Center]
+                                </div>
+                            </div>
+                            <div class="project-tags mt-4">
+                                <span>Palo Alto</span><span>Cisco ISE</span><span>Zero Trust</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card reveal-up delay-3">
+                        <div class="project-content">
+                            <div class="project-icon"><i class="fas fa-code"></i></div>
+                            <h3 class="project-title">Network Automation Platform</h3>
+                            <div class="project-metrics">
+                                <p><strong>Problem:</strong> Manual configurations led to human error and took over 5 hours per cloud routing request.</p>
+                                <p><strong>Solution:</strong> Created a CI/CD pipeline using Terraform for IaC and Ansible for config management.</p>
+                                <p><strong>Tools Used:</strong> Terraform, Ansible, Python, GitHub Actions.</p>
+                                <p><strong>Impact:</strong> Cut provisioning time from 5 hours to 10 minutes (96% drop) and entirely eradicated drift.</p>
+                            </div>
+                            <div class="project-diagram mt-4">
+                                <div class="mermaid">
+                                    graph LR
+                                      Dev[Git] --> CI[CI/CD]
+                                      CI -- TF --> AWS[Cloud]
+                                      CI -- Ansible --> SW[DC Switches]
+                                </div>
+                            </div>
+                            <div class="project-tags mt-4">
+                                <span>Terraform</span><span>Ansible</span><span>Python</span>
                             </div>
                         </div>
                     </div>
@@ -319,6 +384,23 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({ 
+                startOnLoad: true, 
+                theme: 'dark', 
+                fontFamily: 'Inter',
+                themeVariables: {
+                    primaryColor: 'rgba(56, 189, 248, 0.1)',
+                    primaryTextColor: '#f8fafc',
+                    primaryBorderColor: '#38bdf8',
+                    lineColor: '#94a3b8',
+                    secondaryColor: 'rgba(129, 140, 248, 0.1)'
+                }
+            });
+        });
+    </script>
     <script src="main.js"></script>
 </body>
 </html>

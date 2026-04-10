@@ -745,3 +745,30 @@ footer {
         cursor: auto !important;
     }
 }
+
+/* Custom Mermaid and Project Metrics Styling */
+.project-metrics {
+    margin-bottom: 1.5rem;
+}
+
+.project-metrics p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.project-metrics strong {
+    color: var(--accent-1);
+    font-weight: 600;
+}
+
+.project-diagram .mermaid {
+    background: rgba(11, 17, 32, 0.4);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    overflow-x: auto;
+}
