@@ -41,7 +41,7 @@
         <section id="home" class="hero section-padding">
             <div class="container">
                 <div class="hero-content">
-                    <p class="hero-subtitle reveal-up">CLOUD NETWORK ENGINEER | SENIOR ARCHITECT</p>
+                    <p class="hero-subtitle reveal-up">CLOUD NETWORK ENGINEER</p>
                     <h1 class="hero-title reveal-up delay-1">Hi, I'm <span class="text-gradient">Rookesh.</span></h1>
                     <p class="hero-desc reveal-up delay-2">
                         Enterprise Cloud Network Engineer with 10+ years of experience designing highly available AWS VPC architectures, securing containerized Kubernetes environments, and executing massive-scale infrastructure automation.
@@ -102,31 +102,31 @@
                     <div class="skill-card reveal-up">
                         <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
                         <h3>Networking</h3>
-                        <p>BGP, OSPF, SD-WAN, VPN (IPSec/SSL), DNS, LAN/WAN, Advanced Routing.</p>
+                        <p>TCP/IP, VLAN, OSPF, LAN/WAN, Routing & Switching, Network Troubleshooting.</p>
                     </div>
                     
                     <div class="skill-card reveal-up delay-1">
                         <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                        <h3>Cloud Architectures</h3>
-                        <p>AWS (VPC, Transit Gateway, Direct Connect, EC2, IAM, Route 53).</p>
+                        <h3>Cloud</h3>
+                        <p>AWS (VPC, EC2, S3, IAM, Subnets, Route Tables, Security Groups).</p>
                     </div>
 
                     <div class="skill-card reveal-up delay-2">
                         <div class="skill-icon"><i class="fas fa-code"></i></div>
-                        <h3>Automation & Orchestration</h3>
-                        <p>Terraform, Ansible, Docker, Kubernetes Networking (CNI), GitHub Actions.</p>
+                        <h3>Tools & Technologies</h3>
+                        <p>Docker, Kubernetes, Terraform, Jenkins, GitHub Actions.</p>
                     </div>
 
                     <div class="skill-card reveal-up delay-3">
                         <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
                         <h3>Monitoring & Security</h3>
-                        <p>Palo Alto Firewalls, Zero Trust, Wireshark, Datadog, SolarWinds.</p>
+                        <p>Wireshark, Nmap, SolarWinds.</p>
                     </div>
                     
                     <div class="skill-card reveal-up delay-1">
                         <div class="skill-icon"><i class="fa-brands fa-linux"></i></div>
                         <h3>Operating Systems</h3>
-                        <p>Linux (Ubuntu, RHEL), Windows Server Environments.</p>
+                        <p>Linux (Ubuntu), Windows.</p>
                     </div>
                 </div>
             </div>
@@ -247,24 +247,22 @@
                     <div class="project-card reveal-up">
                         <div class="project-content">
                             <div class="project-icon"><i class="fas fa-cloud"></i></div>
-                            <h3 class="project-title">Enterprise AWS VPC Network Design</h3>
+                            <h3 class="project-title">AWS VPC Network Design & Implementation</h3>
                             <div class="project-metrics">
-                                <p><strong>Problem:</strong> Fragmented on-premise networks caused routing loops and latency bottlenecks for high-throughput applications.</p>
-                                <p><strong>Solution:</strong> Architected a hub-and-spoke AWS network deploying VPCs, Transit Gateways, NAT Gateways, and strict Security Groups.</p>
-                                <p><strong>Tools Used:</strong> AWS VPC, Transit Gateway, Direct Connect, Route 53, NACLs.</p>
-                                <p><strong>Impact:</strong> Cut routing latency by 25%, ensured 99.99% uptime, and secured critical database tiers from public exposure.</p>
+                                <p><strong>Problem:</strong> Desired a secure AWS VPC architecture to connect application and database layers safely.</p>
+                                <p><strong>Tools Used:</strong> AWS VPC, Subnets, IGW, NAT Gateway, Route Tables, Security Groups, NACLs.</p>
+                                <p><strong>Impact:</strong> Built AWS VPC with subnets, IGW, NAT – improved latency by 20% and improved network isolation for cloud-based applications.</p>
                             </div>
                             <div class="project-diagram mt-4">
                                 <div class="mermaid">
                                     graph TD
-                                      TGW((AWS Transit Gateway)) --> VPC1[App VPC / Private]
-                                      TGW --> VPC2[DB VPC / Isolated]
-                                      VPC1 -- Secure Route --> VPC2
-                                      IGW[Internet Gateway] -. Controlled NAT .-> VPC1
+                                      IGW[Internet Gateway] --> Public[Public Subnet]
+                                      Public -- NAT --> Private[Private Subnet / App]
+                                      Private --> DB[(Secure Database)]
                                 </div>
                             </div>
                             <div class="project-tags mt-4">
-                                <span>AWS VPC</span><span>Network Architecture</span><span>Security</span>
+                                <span>AWS VPC</span><span>Security Groups</span><span>Network Routing</span>
                             </div>
                         </div>
                     </div>
@@ -273,24 +271,22 @@
                     <div class="project-card reveal-up delay-1">
                         <div class="project-content">
                             <div class="project-icon"><i class="fas fa-boxes"></i></div>
-                            <h3 class="project-title">Advanced Kubernetes Networking (CNI)</h3>
+                            <h3 class="project-title">Kubernetes Deployment & Networking</h3>
                             <div class="project-metrics">
-                                <p><strong>Problem:</strong> Scaling microservices led to IP address exhaustion and lacked lateral threat protection between pods.</p>
-                                <p><strong>Solution:</strong> Deployed Calico/Cilium as the primary CNI, implementing zero-trust network policies and optimized cluster IP pooling.</p>
-                                <p><strong>Tools Used:</strong> Kubernetes (EKS), Calico, Cilium, Docker, BGP.</p>
-                                <p><strong>Impact:</strong> Scaled infrastructure to support 500+ nodes seamlessly and blocked 100% of unauthorized inter-pod traffic.</p>
+                                <p><strong>Problem:</strong> Needed to deploy containerized applications and construct internal / external pod communication.</p>
+                                <p><strong>Tools Used:</strong> Kubernetes, Docker, Calico/Cilium, NodePort, ClusterIP.</p>
+                                <p><strong>Impact:</strong> Configured Kubernetes networking with CNI (Calico/Cilium) – resolved complex routing issues and structured robust service discovery.</p>
                             </div>
                             <div class="project-diagram mt-4">
                                 <div class="mermaid">
                                     graph LR
-                                      Ingress[Load Balancer] --> Svc[K8s NodePort/ClusterIP]
-                                      Svc -- CNI Routing --> Pod1[Microservice A]
-                                      Svc -- CNI Routing --> Pod2[Microservice B]
-                                      Pod1 -. Blocked Policy .- Pod2
+                                      User --> Ingress[K8s Service / NodePort]
+                                      Ingress --> Pod1[App Pod 1]
+                                      Ingress --> Pod2[App Pod 2]
                                 </div>
                             </div>
                             <div class="project-tags mt-4">
-                                <span>Kubernetes</span><span>Calico / Cilium</span><span>CNI Network</span>
+                                <span>Kubernetes</span><span>Docker</span><span>Calico / Cilium</span>
                             </div>
                         </div>
                     </div>
@@ -299,23 +295,22 @@
                     <div class="project-card reveal-up delay-2">
                         <div class="project-content">
                             <div class="project-icon"><i class="fas fa-sync-alt"></i></div>
-                            <h3 class="project-title">Large-Scale Network Automation pipelines</h3>
+                            <h3 class="project-title">CI/CD Pipeline Implementation</h3>
                             <div class="project-metrics">
-                                <p><strong>Problem:</strong> Manual configurations of routing tables and firewall rules took weeks and resulted in dangerous configuration drift.</p>
-                                <p><strong>Solution:</strong> Engineered an Infrastructure as Code (IaC) pipeline integrating declarative networking with automated security scans.</p>
-                                <p><strong>Tools Used:</strong> Terraform, Ansible, Jenkins, GitHub Actions.</p>
-                                <p><strong>Impact:</strong> Slashed network deployment times from 5 days to 15 minutes, entirely eliminating human configuration errors.</p>
+                                <p><strong>Problem:</strong> Automate build, test, and deployment processes while scanning for vulnerabilities.</p>
+                                <p><strong>Tools Used:</strong> Jenkins, GitHub Actions, CI/CD Tools.</p>
+                                <p><strong>Impact:</strong> Built CI/CD pipelines using Jenkins and GitHub Actions – reduced deployment time, improved application security, and optimized release efficiency.</p>
                             </div>
                             <div class="project-diagram mt-4">
                                 <div class="mermaid">
                                     graph LR
-                                      Git[Git Push Config] --> CI[GitHub Actions / Jenkins]
-                                      CI -- Terraform --> AWS[AWS Core Routing]
-                                      CI -- Ansible --> FW[Firewall Policies]
+                                      Git[GitHub Push] --> Jenkins[Jenkins / Actions]
+                                      Jenkins -- Build/Scan --> Docker[Docker Image]
+                                      Docker --> Deploy[Auto Deploy]
                                 </div>
                             </div>
                             <div class="project-tags mt-4">
-                                <span>Terraform</span><span>Ansible</span><span>CI/CD</span>
+                                <span>Jenkins</span><span>GitHub Actions</span><span>Automation</span>
                             </div>
                         </div>
                     </div>
